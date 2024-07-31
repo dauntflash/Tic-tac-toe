@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <label for="button">Select your player: 
+        <button id="buttonX">X</button>
+        <button id="button0">O</button>
+        </label>
+        
+        <label>Select mode:
+        <select name="" id="mode">
+            <option value="computer">Computer vs human</option>
+            <option value="humans">2 players</option>
+        </select>
+        </label>
+        <button id="start" onclick="start()">Start</button>
+    </div>
+
+    <div class="scoreBoard">
+        <h3>Score Board</h3>
+        <div class="scores">
+            <div class="player-one"><span id="player-one-name">Player One</span> <br><span id="player-one-score">0</span></div>
+            <div class="player-two"><span id="player-two-name">Player Two</span><br> <span id="player-two-score">0</span></div>
+        </div>
+    </div>
+
+    <div class="popup">
+        <p id="display"> Player one wins</p>
+        <div class="actions">
+            <img onclick="restart()" src="reload-svgrepo-com.svg" alt="reload">
+            <button onclick="quit()">Quit</button>
+        </div>
+
+    </div>
+    <div class="main">
+        <h2>TIC TAC TOE</h2>
+        <div class="rows">
+            <div class="row">
+                <div class="box" data-hover="X" win-position=1></div>
+                <div class="box" data-hover="X" win-position=2></div>
+                <div class="box" data-hover="X" win-position=3></div>
+            </div>
+            <div class="row">
+                <div class="box" data-hover="X" win-position=4></div>
+                <div class="box" data-hover="X" win-position=5></div>
+                <div class="box" data-hover="X" win-position=6 ></div>
+            </div>
+            <div class="row">
+                <div class="box" data-hover="X" win-position=7></div>
+                <div class="box" data-hover="X" win-position=8></div>
+                <div class="box" data-hover="X" win-position=9></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
