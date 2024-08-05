@@ -45,7 +45,13 @@ function start() {
     if (mode.value === 'computer') {
         playerOne='Player'
         playerTwo='Computer'
-        user_turn()
+        const random_player= Math.floor(Math.random()*2)
+        if (random_player === 0){
+            user_turn()
+        }
+        else{
+            computer_turn()
+        }
     }
     else if (mode.value === 'humans') {
         two_players()
@@ -88,7 +94,7 @@ function computer_turn(){
             if (!game_state()) {
                 user_turn();
             }
-        }, 150);
+        }, 1500);
     }
 }
 
@@ -154,7 +160,7 @@ function user_turn(){
                     X_array.push(parseInt(box.getAttribute('win-position')));
                 }
                 if(!game_state()){
-                    setTimeout(computer_turn, 100);
+                    setTimeout(computer_turn, 300);
                 }
             }
         }
